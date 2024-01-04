@@ -6,7 +6,7 @@ document.addEventListener("click", (e) => {
         handle = e.target.closest(".handle");
     }
     if(handle != null) onHandleClick(handle);
-    console.log(handle);
+
 });
 
 function onHandleClick(handle){
@@ -14,7 +14,6 @@ function onHandleClick(handle){
     const sliderIndex = parseInt(
         getComputedStyle(slider).getPropertyValue("--slider-index")
     );
-
     if(handle.classList.contains("left-handle")){
         slider.style.setProperty("--slider-index",sliderIndex - 1);
     }
